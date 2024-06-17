@@ -1,0 +1,20 @@
+{
+    "packFiles": [
+        "head_low.gSkin", 
+        "eye_L_low.gSkin", 
+        "eye_R_low.gSkin", 
+        "eyelashes_low.gSkin", 
+        "hair_low.gSkin", 
+        "body_low.gSkin", 
+        "jacket_low.gSkin", 
+        "jacket_straps_low.gSkin", 
+        "bra_low.gSkin", 
+        "keyboard_low.gSkin", 
+        "glove_low.gSkin", 
+        "belt_low.gSkin", 
+        "pants_low.gSkin", 
+        "boots_low.gSkin", 
+        "boot_straps_low.gSkin"
+    ], 
+    "rootPath": "C:/Users/guywo/3D Objects/Digital Hazard/maya/assets/Characters/Heroes/Spectra/rig/data/skin"
+}

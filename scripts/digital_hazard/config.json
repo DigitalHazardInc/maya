@@ -1,0 +1,5 @@
+{
+    "color_map": "BaseColor",
+    "normal_map": "Normal",
+    "roughness_map": "OcclusionRoughnessMetallic"
+}
