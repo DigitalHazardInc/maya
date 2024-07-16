@@ -6,5 +6,6 @@ import digital_hazard.core as dh
 import pymel.core as pm
 
 
-model_path = os.path.join(dh.constants.ASSETS, "Characters", "Heroes", "Spectra", "model", "Spectra_model.mb")
+# TODO: handle asset path via asset manager
+model_path = os.path.join(dh.constants.ASSETS_DIR, "Characters", "Heroes", "Spectra", "model", "Spectra_model.mb")
 pm.importFile(model_path)

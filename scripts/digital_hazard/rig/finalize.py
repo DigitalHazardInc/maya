@@ -2,6 +2,10 @@
 import pymel.core as pm
 
 
+GEO_VIS_ATTR = "geo_vis"
+GEO_LOCK_ATTR = "geo_lock"
+
+
 def run():
     # get nodes
     try:
@@ -23,6 +27,17 @@ def run():
     arm_l_ui.shoulder_rotRef.set(1)
     arm_r_ui.shoulder_rotRef.set(1)
     face_ui.control_ikref.set(2)
+
+    # add geo attrs
+    mult_node = pm.shadingNode("multDoubleLinear", asUtility=True)
+    mult_node.input2.set(2)
+    for attr in [GEO_VIS_ATTR, GEO_LOCK_ATTR]:
+        pm.addAttr(rig, longName=attr, attributeType="bool")
+        pm.setAttr(rig + "." + attr, True, e=True, keyable=True)
+    pm.connectAttr(rig + "." + GEO_VIS_ATTR, geo + ".visibility", f=True)
+    pm.connectAttr(rig + "." + GEO_LOCK_ATTR, mult_node + ".input1", f=True)
+    pm.connectAttr(mult_node + ".output", geo + ".overrideDisplayType", f=True)
+    geo.overrideEnabled.set(True)
 
     # set default attrs
     rig.jnt_vis.set(0)

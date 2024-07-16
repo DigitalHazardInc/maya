@@ -26,4 +26,5 @@ pouch_ctl.chainSpring_stiffness_1.set(0.95)
 
 
 finalize.run()
-pm.renameFile(os.path.join(dh.constants.ASSETS, "Characters", "Heroes", "Spectra", "rig", "edits", "Spectra_rig.0000.ma"))
+# TODO: handle asset path via asset manager
+pm.renameFile(os.path.join(dh.constants.ASSETS_DIR, "Characters", "Heroes", "Spectra", "rig", "edits", "Spectra_rig.0000.ma"))
